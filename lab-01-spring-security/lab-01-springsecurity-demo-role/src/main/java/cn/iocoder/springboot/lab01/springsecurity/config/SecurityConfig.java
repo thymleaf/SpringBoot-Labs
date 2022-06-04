@@ -7,8 +7,13 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
-@Configuration
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+/***
+ * 升级到Springboot Security 5.7.1, 配置方式以修改
+ * @see WebSecurityConfig
+ */
+@Deprecated
+//@Configuration
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
