@@ -1,17 +1,10 @@
 package cn.iocoder.springboot.lab68.authorizationserverdemo.config;
 
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
-import java.security.interfaces.RSAPrivateKey;
-import java.security.interfaces.RSAPublicKey;
-import java.util.UUID;
-
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.ImmutableJWKSet;
 import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
-
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,9 +15,6 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.core.oidc.OidcScopes;
@@ -35,9 +25,14 @@ import org.springframework.security.oauth2.server.authorization.client.Registere
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.config.ClientSettings;
 import org.springframework.security.oauth2.server.authorization.config.ProviderSettings;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
+
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.interfaces.RSAPrivateKey;
+import java.security.interfaces.RSAPublicKey;
+import java.util.UUID;
 
 /**
  * OAuth Authorization Server Configuration.
@@ -137,5 +132,11 @@ public class OAuth2AuthorizationServerSecurityConfiguration {
         return keyPair;
     }
 }
-// url:
+// 获取授权码
 // http://127.0.0.1:8080/oauth2/authorize?response_type=code&client_id=messaging-client&scope=openid%20message.read%20message.write&state=state&redirect_uri=http://127.0.0.1/login/oauth2/code/messaging-client-oidc
+
+// 获取token
+// http://127.0.0.1:8080/oauth2/token?client_id=messaging-client&grant_type=authorization_code&code=KOB5xIb4SgeE3f51qfVTLylRfwKmnpTBPM2-qODzx9kPUo8DsKz2oRgmt0o90wz_3lPPIs-8Av3fEaW_O61Bli08V-Yi6A2yNtrT352e8pBihRWe4itj3MeWAFxHK7b8&redirect_uri=http://127.0.0.1/login/oauth2/code/messaging-client-oidc&state=state
+
+// 刷新token
+// http://localhost:8080/oauth2/token?grant_type=refresh_token&refresh_token=ygTATxZaCUE7abeCo2IhdJgJZ-dtEWkVTCXVwujdiTLxYjlks-K39wquB6UVgsaGJY_M7Oj280cWRaWfYGjOV0SVYq5tyzB48rVAdFRNuEvTuCSiUprWeZvPJM8sl-YD
