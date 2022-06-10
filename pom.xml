@@ -44,7 +44,7 @@
 <!--        <module>lab-28</module>-->
 <!--        <module>lab-29</module>-->
 <!--        <module>lab-30</module>-->
-        <module>lab-31</module>
+<!--        <module>lab-31</module>-->
 <!--        <module>lab-32</module>-->
 <!--        <module>lab-33</module>-->
 <!--        <module>lab-34</module>-->
@@ -56,7 +56,7 @@
 <!--        <module>lab-40</module>-->
 <!--        <module>lab-41</module>-->
 <!--        <module>lab-42</module>-->
-<!--        <module>lab-43</module>-->
+        <module>lab-43</module>
 <!--        <module>lab-44</module>-->
 <!--        <module>lab-45</module>-->
 <!--        <module>lab-46</module>-->
@@ -81,7 +81,7 @@
 <!--        <module>lab-65</module>-->
 <!--        <module>lab-66</module>-->
 <!--        <module>lab-67</module>-->
-        <module>lab-68-spring-security-oauth</module>
+<!--        <module>lab-68-spring-security-oauth</module>-->
 <!--        <module>lab-69-proxy</module>-->
 <!--        <module>lab-70-db-doc</module>-->
 <!--        <module>lab-71-http-debug</module>-->

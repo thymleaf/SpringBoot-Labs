@@ -17,12 +17,15 @@ public class Application {
     }
 
     @Component
-    public class OrderPropertiesCommandLineRunner implements CommandLineRunner {
+    public static class OrderPropertiesCommandLineRunner implements CommandLineRunner {
 
         private final Logger logger = LoggerFactory.getLogger(getClass());
 
-        @Autowired
-        private OrderProperties orderProperties;
+        private final OrderProperties orderProperties;
+
+        public OrderPropertiesCommandLineRunner(OrderProperties orderProperties) {
+            this.orderProperties = orderProperties;
+        }
 
         @Override
         public void run(String... args) {
@@ -33,7 +36,7 @@ public class Application {
     }
 
     @Component
-    public class ValueCommandLineRunner implements CommandLineRunner {
+    public static class ValueCommandLineRunner implements CommandLineRunner {
 
         private final Logger logger = LoggerFactory.getLogger(getClass());
 
