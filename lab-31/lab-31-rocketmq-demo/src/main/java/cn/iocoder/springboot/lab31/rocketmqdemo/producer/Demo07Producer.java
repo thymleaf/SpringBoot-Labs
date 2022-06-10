@@ -26,11 +26,13 @@ public class Demo07Producer {
         Message<Demo07Message> message = MessageBuilder.withPayload(new Demo07Message().setId(id))
                 .build();
         // 发送事务消息
-        return rocketMQTemplate.sendMessageInTransaction(TX_PRODUCER_GROUP, Demo07Message.TOPIC, message,
-                id);
+//        return rocketMQTemplate.sendMessageInTransaction(TX_PRODUCER_GROUP, Demo07Message.TOPIC, message,
+//                id);
+        return rocketMQTemplate.sendMessageInTransaction(Demo07Message.TOPIC, message, id);
     }
 
-    @RocketMQTransactionListener(txProducerGroup = TX_PRODUCER_GROUP)
+    // @RocketMQTransactionListener(txProducerGroup = TX_PRODUCER_GROUP)
+    @RocketMQTransactionListener()
     public class TransactionListenerImpl implements RocketMQLocalTransactionListener {
 
         private Logger logger = LoggerFactory.getLogger(getClass());
