@@ -13,9 +13,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>lab-46-sentinel-demo</module>
-        <module>lab-46-sentinel-demo-nacos</module>
-        <module>lab-46-sentinel-demo-apollo</module>
-        <module>lab-46-sentinel-demo-file</module>
+<!--        <module>lab-46-sentinel-demo-nacos</module>-->
+<!--        <module>lab-46-sentinel-demo-apollo</module>-->
+<!--        <module>lab-46-sentinel-demo-file</module>-->
     </modules>
 
 

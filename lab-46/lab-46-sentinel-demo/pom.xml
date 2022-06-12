@@ -5,12 +5,16 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.2.RELEASE</version>
+        <version>2.7.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>lab-46-sentinel-demo</artifactId>
+
+    <properties>
+        <sentinel.version>1.8.4</sentinel.version>
+    </properties>
 
     <dependencies>
         <!-- 实现对 SpringMVC 的自动化配置 -->
@@ -23,31 +27,31 @@
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-core</artifactId>
-            <version>1.7.1</version>
+            <version>${sentinel.version}</version>
         </dependency>
         <!-- Sentinel 接入控制台 -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-transport-simple-http</artifactId>
-            <version>1.7.1</version>
+            <version>${sentinel.version}</version>
         </dependency>
         <!-- Sentinel 对 SpringMVC 的支持 -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-spring-webmvc-adapter</artifactId>
-            <version>1.7.1</version>
+            <version>${sentinel.version}</version>
         </dependency>
         <!-- Sentinel 对【热点参数限流】的支持 -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-parameter-flow-control</artifactId>
-            <version>1.7.1</version>
+            <version>${sentinel.version}</version>
         </dependency>
         <!-- Sentinel 对 Spring AOP 的拓展 -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-annotation-aspectj</artifactId>
-            <version>1.7.1</version>
+            <version>${sentinel.version}</version>
         </dependency>
     </dependencies>
 
