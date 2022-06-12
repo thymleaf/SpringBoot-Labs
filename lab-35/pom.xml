@@ -19,11 +19,11 @@
         <module>lab-35-admin-02-demo-application</module>
         <module>lab-35-admin-02-eurekaserver</module>
 
-        <module>lab-35-admin-03-adminserver</module>
-        <module>lab-35-admin-03-demo-application</module>
+<!--        <module>lab-35-admin-03-adminserver</module>-->
+<!--        <module>lab-35-admin-03-demo-application</module>-->
 
-        <module>lab-35-admin-04-adminserver</module>
-        <module>lab-35-admin-05-adminserver</module>
+<!--        <module>lab-35-admin-04-adminserver</module>-->
+<!--        <module>lab-35-admin-05-adminserver</module>-->
     </modules>
 
 

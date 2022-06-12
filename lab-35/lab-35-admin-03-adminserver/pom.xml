@@ -5,12 +5,16 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.2.RELEASE</version>
+        <version>2.7.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>lab-35-admin-03-adminserver</artifactId>
+
+    <properties>
+        <spring-boot.admin>2.7.0</spring-boot.admin>
+    </properties>
 
     <dependencies>
         <!-- 实现对 Spring Boot Admin Server 的自动化配置 -->
@@ -22,7 +26,7 @@
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-server</artifactId>
-            <version>2.2.0</version>
+            <version>${spring-boot.admin}</version>
         </dependency>
 
         <!-- 实现对 Spring Security 的自动化配置 -->
