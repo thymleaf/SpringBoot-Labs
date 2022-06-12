@@ -1,15 +1,13 @@
 package cn.iocoder.springboot.lab23.testdemo.dao;
 
 import cn.iocoder.springboot.lab23.testdemo.dataobject.UserDO;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserDaoTest {
 
@@ -24,10 +22,12 @@ public class UserDaoTest {
         // 查询用户
         UserDO user = userDao.selectById(1);
 
+        System.out.println("testSelectById...");
+
         // 校验结果
-        Assert.assertEquals("编号不匹配", 1, (int) user.getId());
-        Assert.assertEquals("用户名不匹配", "username:1", user.getUsername());
-        Assert.assertEquals("密码不匹配", "password:1", user.getPassword());
+        Assertions.assertEquals(1, user.getId(), "编号不匹配");
+        Assertions.assertEquals("username:1", user.getUsername(), "用户名不匹配");
+        Assertions.assertEquals("password:1", user.getPassword(), "密码不匹配");
     }
 
 }

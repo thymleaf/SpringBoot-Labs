@@ -1,16 +1,17 @@
 package cn.iocoder.springboot.lab23.testdemo.controller;
 
+import cn.iocoder.springboot.lab23.testdemo.Application;
 import cn.iocoder.springboot.lab23.testdemo.dataobject.UserDO;
 import cn.iocoder.springboot.lab23.testdemo.service.UserService;
 import org.hamcrest.core.IsEqual;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
+import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -19,8 +20,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 /**
  * UserController 单元测试
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = Application.class)
 @AutoConfigureMockMvc
 public class UserControllerTest {
 

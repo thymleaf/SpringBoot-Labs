@@ -3,8 +3,7 @@ package cn.iocoder.springboot.lab23.testdemo.controller;
 import cn.iocoder.springboot.lab23.testdemo.dataobject.UserDO;
 import cn.iocoder.springboot.lab23.testdemo.service.UserService;
 import org.hamcrest.core.IsEqual;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -19,7 +18,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 /**
  * UserController 单元测试
  */
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
+//@ExtendWith(Spri)
 @SpringBootTest
 @AutoConfigureMockMvc
 public class UserControllerTest {

@@ -2,16 +2,21 @@ package cn.iocoder.springboot.lab23.testdemo.service;
 
 import cn.iocoder.springboot.lab23.testdemo.dao.UserDao;
 import cn.iocoder.springboot.lab23.testdemo.dataobject.UserDO;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+//import org.junit.Assert;
+//import org.junit.Test;
+//import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
+import static org.springframework.test.util.AssertionErrors.assertEquals;
+
+//import static org.junit.jupiter.api.Assertions.assertEquals;
+
+//@RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserServiceTest {
 
@@ -31,9 +36,9 @@ public class UserServiceTest {
         UserDO user = userService.get(1);
 
         // 校验结果
-        Assert.assertEquals("编号不匹配", 1, (int) user.getId());
-        Assert.assertEquals("用户名不匹配", "username:1", user.getUsername());
-        Assert.assertEquals("密码不匹配", "password:1", user.getPassword());
+        assertEquals("编号不匹配", 1, (int) user.getId());
+        assertEquals("用户名不匹配", "username:1", user.getUsername());
+        assertEquals("密码不匹配", "password:1", user.getPassword());
     }
 
 }
