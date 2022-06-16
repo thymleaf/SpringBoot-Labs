@@ -3,17 +3,19 @@ package cn.iocoder.springboot.lab24.apidoc.controller;
 import cn.iocoder.springboot.lab24.apidoc.dto.UserAddDTO;
 import cn.iocoder.springboot.lab24.apidoc.dto.UserUpdateDTO;
 import cn.iocoder.springboot.lab24.apidoc.vo.UserVO;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.oas.annotations.EnableOpenApi;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-//@RestController
+@RestController
 @RequestMapping("/tests")
-//@Api(tags = "用户 API 接口")
+@Api(tags = "用户 API 接口")
 public class TestController {
 
     @GetMapping("/list")
