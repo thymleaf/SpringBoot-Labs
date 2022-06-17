@@ -15,7 +15,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/tests")
-@Api(tags = "用户 API 接口")
+@Api(tags = "测试 API 接口")
 public class TestController {
 
     @GetMapping("/list")
